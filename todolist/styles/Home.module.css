@@ -127,3 +127,13 @@
     filter: invert(1);
   }
 }
+
+
+.button{
+ font-size: 30px;
+ padding: 30px;
+}
+
+.input{
+  height:50px; font-size:30px;
+}

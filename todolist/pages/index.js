@@ -1,34 +1,42 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import Todo from '../components/Todo'
 
 export default function Home() {
 
   const [todo, setTodo] = useState([])
 
-  useEffect({
+  const[input,setInput] = useState('')
 
-      setTodo(prev => todo, ...prev)
+  
+  function addInput(e){
 
-  },[todo])
+    setInput(e.target.value)
+  console.log("work1")
+    }
 
-  function(){
+    function addTodo(){
+         
+      setTodo(prev => [input, ...prev])
+      console.log("work2")
+    }
+
+  return (
 
     
-
-  }
-  return (
     <div className={styles.container}>
      
-
       <main className={styles.main}>
-      <input type="text" />
+      <input className = {styles.input} onChange = {addInput}type="text" />
             
+            <button className = {styles.button} onClick = {addTodo}>add todo</button>
 
+            <Todo todo = {todo} />
+        
       </main>
 
-     
     </div>
   )
 }
