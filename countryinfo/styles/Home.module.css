@@ -127,3 +127,18 @@
     filter: invert(1);
   }
 }
+
+
+.para{
+  font-size: 2rem;
+}
+
+.input{
+  height:50px;
+  font-size:30px;
+}
+
+.button{
+  font-size: 20px;
+  padding: 20px;
+ }

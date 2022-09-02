@@ -14,6 +14,7 @@ export default function Home() {
   function addInput(e){
 
     setInput(e.target.value)
+    
   console.log("work1")
     }
 
@@ -21,16 +22,17 @@ export default function Home() {
          
       setTodo(prev => [input, ...prev])
       console.log("work2")
+      setInput("")
     }
 
   return (
 
-    
+
     <div className={styles.container}>
      
       <main className={styles.main}>
-      <input className = {styles.input} onChange = {addInput}type="text" />
-            
+      <input className = {styles.input} onChange = {addInput} type="text" value = {input}/>
+           
             <button className = {styles.button} onClick = {addTodo}>add todo</button>
 
             <Todo todo = {todo} />
